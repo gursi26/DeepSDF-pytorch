@@ -1,9 +1,5 @@
-# paper-implementation-template
-A PyTorch implementation of "{}" by {}
+# DeepSDF PyTorch
+A PyTorch implementation of "DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation" by Park et al.
 
-[Paper]() </br>
-[Dataset]()
-
-Sample outputs after brief training:
-```
-```
+[DeepSDF Paper](https://arxiv.org/abs/1901.05103) </br>
+[ShapeNetCore dataset](https://arxiv.org/abs/1512.03012)
