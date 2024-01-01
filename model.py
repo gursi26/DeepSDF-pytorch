@@ -13,7 +13,7 @@ class DeepSDF(nn.Module):
         self.layer5 = self.create_layer_block(layer_size, layer_size)
         self.layer6 = self.create_layer_block(layer_size, layer_size)
         self.layer7 = self.create_layer_block(layer_size, layer_size)
-        self.layer8 = self.create_layer_block(layer_size, 1)
+        self.layer8 = nn.Linear(layer_size, 1)
 
     def create_layer_block(self, input_size, output_size):
         return nn.Sequential(
@@ -44,4 +44,4 @@ class DeepSDF(nn.Module):
 
         # return has shape [batch_size, num_coords], where each element is the SDF
         # at the given input coordinate
-        return x.squeeze(-1)
+        return x.squeeze(-1).tanh()
